@@ -28,7 +28,7 @@ A device is describe by a number of attributes.
 | `type` | X | `string` |
 | `features` | X | `object` |
 | `root` | X | `string` |
-| `lastWillID` || `UUID` |
+| `providerID` || `UUID` |
 
 ### Name
 
@@ -57,7 +57,7 @@ Because providers MUST
 it is RECOMMENDED that the `root` topic is prefixed with the `username`. This
 makes it clear who "owns" the device and enables applying more strict ACLs.
 
-### Last Will ID
+### Provider ID
 
 The purpose of this attribute is explained in the [Announcement & Discovery
 document]({{ site.baseurl }}{% link v1/discovery.md %}). It is OPTIONAL but
