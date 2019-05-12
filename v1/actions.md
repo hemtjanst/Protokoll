@@ -54,7 +54,7 @@ topic it will already be aware of succesful state changes.
 
 Providers MUST subscribe to the `desired` topics of all their features unless
 the feature is read-only. Providers MUST NOT publish to the `desired` topics.
-The `desired topic is read-only for a provider and an ACL MAY be put in place
+The `desired` topic is read-only for a provider and an ACL MAY be put in place
 to enforce this.
 
 ## Changing state
@@ -65,14 +65,14 @@ topic MUST use the `type` specified for this feature when converting it to
 a native type.
 
 The boolean value `true` is encoded as `"1"`, `false` as `"0"`. Any other value
-is considered invalid and MUST not trigger a state change.
+is considered invalid and MUST NOT trigger a state change.
 
 ## Read-only features
 
 When a feature has the `readOnly` attribute set to `true` only the `current`
 topic will be available.
 
-Publishing to the `desired` topic has no effect. It is like screaming into a
+Publishing to the `desired` topic has no effect. It is like screaming into the
 void. The actor SHOULD take note of the `readOnly` attribute of the device
 and act accordingly.
 
@@ -82,10 +82,10 @@ gracefully.
 
 ## Building the topic name
 
-In order to make applying ACLs simpler `current` and `desired` are **prefixed**
-to the `root` attribute, not appended to the feature name.
+In order to make applying ACLs simpler, `current` and `desired` are **prefixed**
+to the `root` topic.
 
-* Let the device `root` attribute be: `<owner>/lightbulb/1`
+* Let the device `root` topic be: `<owner>/lightbulb/1`
 * Let the feature we want to control be: `on`
 
 This means that:
