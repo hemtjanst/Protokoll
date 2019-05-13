@@ -1,4 +1,4 @@
-# Protokoll
+# Protokoll [![Build Status](https://travis-ci.org/hemtjanst/protokoll.svg?branch=master)](https://travis-ci.org/hemtjanst/protokoll)
 
 Hemtjänst documentation.
 
