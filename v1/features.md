@@ -137,7 +137,7 @@ Multiple features are represented through the `features` map:
 {%- for page in pages_list -%}
 {%- if page.url contains "/v1/features/" -%}
 {%- if page.url != "/v1/features/" %}
-| [{{ page.title }}]({{ page.url }}) | {{ page.description }} |
+| [{{ page.title }}]({{ site.baseurl }}{{ page.url }}) | {{ page.description }} |
 {%- endif -%}
 {%- endif -%}
 {%- endfor -%}
