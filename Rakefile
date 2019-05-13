@@ -17,9 +17,11 @@ end
 desc 'Validate _site/ with html-proofer'
 task :validate do
   HTMLProofer.check_directory('./_site', {
-    :url_ignore => [/hemtjan.st/],
+    :directory_index_file => "index.html",
+    :internal_domains => ["hemtjan.st"],
     :check_html => true,
     :assume_extension => true,
+    :url_swap => { "\/protokoll\/" => "\/" }, # Needed b/c of baseurl
   }).run
 end
 
