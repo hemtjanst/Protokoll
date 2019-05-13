@@ -7,8 +7,9 @@ branches:
   - master
   - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 before_install:
-  - gem update --system --no-rdoc --no-ri
-  - gem install bundler --no-rdoc --no-ri
+  - gem update --system
+  - echo "gem: --no-document" > $HOME/.gemrc
+  - gem install bundler
 dist: trusty
 rvm:
   - 2.6.0
