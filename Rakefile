@@ -44,4 +44,5 @@ def notify message
   puts "#{message}...".blue
   puts '###################################################'.blue
   puts
+  STDOUT.flush
 end
